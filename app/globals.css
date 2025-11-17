@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0f1a;
+  --fg: #e5e7eb;
+}
+
+html, body, :root {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(30,64,175,0.18), transparent 60%),
+              radial-gradient(1000px 700px at -10% 10%, rgba(59,130,246,0.12), transparent 55%),
+              var(--bg);
+  color: var(--fg);
+}
+
+input, textarea, select {
+  @apply bg-white/5 border border-white/10 rounded-md text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500;
+}
+
+button {
+  @apply rounded-md bg-brand-600 hover:bg-brand-500 active:bg-brand-700 disabled:bg-white/10 disabled:text-white/40 transition-colors;
+}
